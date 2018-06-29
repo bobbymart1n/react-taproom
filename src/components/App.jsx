@@ -7,8 +7,11 @@ import NewKeg from './NewKeg/NewKeg';
 
 
 function App(){
+  const appStyles = {
+    fontFamily: 'sans-serif',
+  };
   return (
-    <div>
+    <div style={appStyles}>
       <Header />
       <Switch>
         <Route exact path='/' component={KegList} />
