@@ -2,3 +2,9 @@
   display: flex;
   align-items: center;
 }
+.kegListItem ul li {
+  font-weight: 100;
+}
+.kegListItem ul li span {
+  font-weight: 600;
+}

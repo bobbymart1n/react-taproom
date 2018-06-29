@@ -8,11 +8,11 @@ function KegListItem(props) {
     <div className={styles.kegListItem}>
       <div className={styles.kegName}>{props.name}<span><SellKegButton/></span></div>
       <ul>
-        <li>{props.brewer}</li>
-        <li>{props.description}</li>
-        <li>{props.abv}</li>
-        <li>{props.price}</li>
-        <li>{props.remaining}</li>
+        <li><span>Brewer:</span> {props.brewer}</li>
+        <li><span>Description:</span> {props.description}</li>
+        <li><span>ABV:</span> {props.abv}</li>
+        <li><span>Price:</span> ${props.price}</li>
+        <li><span>Pints Remaing:</span> {props.remaining}</li>
       </ul>
     </div>
   );
