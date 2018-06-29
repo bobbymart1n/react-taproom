@@ -9,6 +9,33 @@
   border-bottom: 2px solid #157696;
   position: relative;
 }
+.pintsRemaining {
+  background-color: rgba(56,23,44,.4);
+  position: absolute;
+  left: 0;
+  height: 100%;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  transition: background-color .3s ease;
+  cursor: pointer;
+}
+.pintsRemaining span {
+  opacity: 0;
+  position: relative;
+  left: 20px;
+  white-space: nowrap;
+  font-size: 80%;
+  color: #000;
+}
+.pintsRemaining:hover span {
+  opacity: .8;
+}
+.pintsRemaining:hover {
+  background-color: rgba(234,243,65,.8);
+  transition: background-color .3s ease;
+}
+
 .kegNameAndButton {
   display: flex;
   align-items: center;

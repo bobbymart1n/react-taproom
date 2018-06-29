@@ -6,12 +6,7 @@ import arrow from './../../../images/angle-down-solid.svg';
 
 function KegListItem(props) {
   const pintRemaining = {
-    backgroundColor: 'rgba(56,23,44,.4)',
-    position: 'absolute',
-    left: '0',
     width: props.remaining + '%',
-    height: '100%',
-    zIndex: 0,
   };
   return (
     <div className={styles.kegListItem}>
@@ -21,7 +16,9 @@ function KegListItem(props) {
           <span><SellKegButton/></span>
         </div>
         <img src={arrow} />
-        <div style={pintRemaining}>&nbsp;</div>
+        <div style={pintRemaining} className={styles.pintsRemaining}>
+          <span>Pints Remaining: {props.remaining}</span>
+        </div>
       </div>
       <ul>
         <li><span>Brewer:</span> {props.brewer}</li>
