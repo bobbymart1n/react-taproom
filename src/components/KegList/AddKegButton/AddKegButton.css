@@ -1,0 +1,9 @@
+.addKegButton {
+  border: none;
+  padding: 10px 40px;
+  font-size: 16px;
+  border-radius: 5px;
+  background-color: #17a2b8;
+  margin: 20px 0;
+  color: white;
+}

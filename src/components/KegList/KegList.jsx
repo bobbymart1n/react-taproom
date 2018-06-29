@@ -61,6 +61,7 @@ const state = {
 function KegList() {
   return (
     <div className={styles.kegList}>
+      <AddKegButton />
       {state.masterKegList.map((beer, index) =>
         <KegListItem
           name={beer.name}
@@ -68,10 +69,9 @@ function KegList() {
           description={beer.description}
           abv={beer.abv}
           price={beer.price}
-          remaining={beer.remaining}  
+          remaining={beer.remaining}
           key={index}/>
       )}
-      <AddKegButton />
     </div>
   );
 }

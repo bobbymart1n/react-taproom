@@ -1,9 +1,10 @@
 import React from 'react';
+import styles from './AddKegButton.css';
 
 function AddKegButton() {
   return (
     <div>
-      Test Add Keg Button
+      <button className={styles.addKegButton}>Add a New Keg!</button>
     </div>
   );
 }
