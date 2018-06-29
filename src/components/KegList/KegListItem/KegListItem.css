@@ -5,6 +5,17 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 80px;
+  border-bottom: 2px solid #157696;
+  position: relative;
+}
+.kegName img {
+  width: 15px;
+  position: absolute;
+  right: 0;
+}
+.kegListItem ul {
+  list-style: none;
 }
 .kegListItem ul li {
   font-weight: 100;

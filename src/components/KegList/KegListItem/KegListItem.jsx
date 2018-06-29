@@ -2,11 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './KegListItem.css';
 import SellKegButton from './../SellKegButton/SellKegButton';
+import arrow from './../../../images/angle-down-solid.svg';
 
 function KegListItem(props) {
   return (
     <div className={styles.kegListItem}>
-      <div className={styles.kegName}>{props.name}<span><SellKegButton/></span></div>
+      <div className={styles.kegName}>{props.name}<span><SellKegButton/></span><img src={arrow} /></div>
       <ul>
         <li><span>Brewer:</span> {props.brewer}</li>
         <li><span>Description:</span> {props.description}</li>
