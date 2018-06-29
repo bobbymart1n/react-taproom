@@ -9,6 +9,12 @@
   border-bottom: 2px solid #157696;
   position: relative;
 }
+.kegNameAndButton {
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
 .kegName img {
   width: 15px;
   position: absolute;

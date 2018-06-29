@@ -5,9 +5,24 @@ import SellKegButton from './../SellKegButton/SellKegButton';
 import arrow from './../../../images/angle-down-solid.svg';
 
 function KegListItem(props) {
+  const pintRemaining = {
+    backgroundColor: 'rgba(56,23,44,.4)',
+    position: 'absolute',
+    left: '0',
+    width: props.remaining + '%',
+    height: '100%',
+    zIndex: 0,
+  };
   return (
     <div className={styles.kegListItem}>
-      <div className={styles.kegName}>{props.name}<span><SellKegButton/></span><img src={arrow} /></div>
+      <div className={styles.kegName}>
+        <div className={styles.kegNameAndButton}>
+          {props.name}
+          <span><SellKegButton/></span>
+        </div>
+        <img src={arrow} />
+        <div style={pintRemaining}>&nbsp;</div>
+      </div>
       <ul>
         <li><span>Brewer:</span> {props.brewer}</li>
         <li><span>Description:</span> {props.description}</li>

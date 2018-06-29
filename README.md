@@ -16,6 +16,7 @@ This is a Friday project for Epicodus. The objective is to take an existing Angu
 * Component Flow  
 ![Component Flow](src/images/project-flow-3.png)
 * As I was building out the flow chart, I have been trying to figure out how I want to split up the views and not have all of them on one view.
+* 
 * Notes about unforeseen problems and questions during the development process go here
 
 
