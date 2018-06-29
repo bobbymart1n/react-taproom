@@ -4,7 +4,7 @@
 ## By Bobby Martin
 
 ## Description
-This is a Friday project for Epicodus. The objective is to take an existing Angular project we've done, and turn it into a React application. I think some of the differences I'll be facing are parsing out components compared to how they are laid out in the Angular version. Also where that data lies and how I need to be passing it down to whatever corresponding children. 
+This is a Friday project for Epicodus. The objective is to take an existing Angular project we've done, and turn it into a React application. I think some of the differences I'll be facing are parsing out components compared to how they are laid out in the Angular version. Also where that data lies and how I need to be passing it down to whatever corresponding children.
 
 ## Setup Requirements
 
@@ -13,7 +13,7 @@ This is a Friday project for Epicodus. The objective is to take an existing Angu
 * Run `npm start` to start the development server
 
 ## Notes
-* Notes about unforeseen problems go here
+* Notes about unforeseen problems and questions during the development process go here
 
 ## Technologies
 * React
