@@ -9,6 +9,8 @@ import NewKeg from './NewKeg/NewKeg';
 function App(){
   const appStyles = {
     fontFamily: 'sans-serif',
+    backgroundColor: '#513E13',
+    height: '100%'
   };
   return (
     <div style={appStyles}>
