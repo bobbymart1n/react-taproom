@@ -14,7 +14,7 @@ This is a Friday project for Epicodus. The objective is to take an existing Angu
 
 ## Notes
 * Component Flow  
-![Component Flow](src/images/project-flow.png)
+![Component Flow](src/images/project-flow-2.png)
 * Notes about unforeseen problems and questions during the development process go here
 
 
