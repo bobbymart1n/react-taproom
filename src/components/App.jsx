@@ -10,6 +10,7 @@ function App(){
   const appStyles = {
     fontFamily: 'sans-serif',
     backgroundColor: '#513E13',
+    color: 'white',
     height: '100%'
   };
   return (

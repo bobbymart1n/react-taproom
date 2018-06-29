@@ -2,5 +2,7 @@
   width: 650px;
   min-height: 500px;
   background-color: #084C61;
-  margin: auto;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 10px;
 }

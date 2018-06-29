@@ -1,9 +1,10 @@
 import React from 'react';
+import styles from './SellKegButton.css';
 
 function SellKegButton() {
   return(
     <div>
-      Sell Keg
+      <button className={styles.sellKegButton}>Sell Pint</button>
     </div>
   );
 }
