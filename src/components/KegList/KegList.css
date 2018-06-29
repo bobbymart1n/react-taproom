@@ -3,6 +3,12 @@
   min-height: 500px;
   background-color: #084C61;
   margin: 40px auto;
+  margin-top: 240px;
   padding: 20px;
   border-radius: 10px;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }

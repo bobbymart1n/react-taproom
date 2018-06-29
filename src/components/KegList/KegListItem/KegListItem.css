@@ -1,6 +1,10 @@
+.kegListItem {
+  width: 500px;
+}
 .kegName {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 .kegListItem ul li {
   font-weight: 100;
