@@ -10,7 +10,7 @@ function NewKeg(props) {
   let _price = null;
   const handleNewKegFormSubmission = (e) => {
     e.preventDefault();
-    props.onAddingNewKeg({name: _name.value, brewer: _brewer.value, description: _description.value, abv: _abv.value, price: _price.value});
+    props.onAddingNewKeg({name: _name.value, brewer: _brewer.value, description: _description.value, abv: _abv.value, price: _price.value, remaining: 124});
     _name.value = '';
     _brewer.value = '';
     _description.value = '';

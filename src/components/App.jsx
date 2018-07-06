@@ -16,12 +16,18 @@ class App extends React.Component {
       masterKegList: {}
     };
     this.handleAddingNewKeg = this.handleAddingNewKeg.bind(this);
+    this.handleSellingPints = this.handleSellingPints.bind(this);
   }
   handleAddingNewKeg(newKeg) {
     let newKegId = v4();
     let newKegList = Object.assign({}, this.state.masterKegList, {
       [newKegId]: newKeg
     });
+    this.setState({masterKegList: newKegList});
+  }
+  handleSellingPints(kegId) {
+    let newKegList = Object.assign({}, this.state.masterKegList);
+    newKegList[kegId].remaining--;
     this.setState({masterKegList: newKegList});
   }
   render() {
@@ -44,7 +50,7 @@ class App extends React.Component {
         <Header />
         <img style={jerryStyles} src={jerry} />
         <Switch>
-          <Route exact path='/' render={()=><KegList kegList={this.state.masterKegList} />} />
+          <Route exact path='/' render={()=><KegList kegList={this.state.masterKegList} onSellingPint={this.handleSellingPints} />} />
           <Route path='/newkeg' render={()=><NewKeg onAddingNewKeg={this.handleAddingNewKeg}/>} />
         </Switch>
       </div>
