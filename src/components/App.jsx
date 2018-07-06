@@ -41,7 +41,7 @@ class App extends React.Component {
         <Header />
         <img style={jerryStyles} src={jerry} />
         <Switch>
-          <Route exact path='/' component={KegList} />
+          <Route exact path='/' render={()=><KegList kegList={this.state.masterKegList}/>} />
           <Route path='/newkeg' render={()=><NewKeg onAddingNewKeg={this.handleAddingNewKeg}/>} />
         </Switch>
       </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import KegListItem from './KegListItem/KegListItem';
 import AddKegButton from './AddKegButton/AddKegButton';
 
@@ -58,11 +59,11 @@ const state = {
   ]
 };
 
-function KegList() {
+function KegList(props) {
   return (
     <div className={styles.kegList}>
       <AddKegButton />
-      {state.masterKegList.map((beer, index) =>
+      {props.kegList.map((beer, index) =>
         <KegListItem
           name={beer.name}
           brewer={beer.brewer}
@@ -75,5 +76,9 @@ function KegList() {
     </div>
   );
 }
+
+KegList.propTypes = {
+  kegList: PropTypes.array
+};
 
 export default KegList;
