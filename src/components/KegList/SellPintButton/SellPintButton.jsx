@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from './SellKegButton.css';
+import styles from './SellPintButton.css';
 
-function SellKegButton() {
+function SellPintButton() {
   return(
     <div>
       <button className={styles.sellKegButton}>Sell Pint</button>
@@ -9,4 +9,4 @@ function SellKegButton() {
   );
 }
 
-export default SellKegButton;
+export default SellPintButton;
