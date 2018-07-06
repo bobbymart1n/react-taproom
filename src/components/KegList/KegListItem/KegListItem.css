@@ -46,7 +46,7 @@
 .kegName img {
   width: 15px;
   position: absolute;
-  right: 0;
+  right: 10px;
 }
 .kegListItem ul {
   list-style: none;
