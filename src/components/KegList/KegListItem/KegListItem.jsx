@@ -37,7 +37,7 @@ KegListItem.propTypes = {
   description: PropTypes.string,
   abv: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,
-  remaining: PropTypes.string.isRequired
+  remaining: PropTypes.number.isRequired
 };
 
 export default KegListItem;
