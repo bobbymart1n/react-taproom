@@ -8,21 +8,26 @@ class KegListItem extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      pints: 124
+      pints: 124,
+      showDetails: false
     };
     this.handleSellingPints = this.handleSellingPints.bind(this);
+    this.handleShowDetails = this.handleShowDetails.bind(this);
   }
   handleSellingPints() {
     let newPints = this.state.pints;
     newPints--;
     this.setState({pints: newPints});
   }
+  handleShowDetails() {
+    this.setState(prevState => ({showDetails: !prevState.showDetails}));
+  }
   render() {
     const pintRemaining = {
       width: this.state.pints + '%',
     };
     return (
-      <div className={styles.kegListItem}>
+      <div className={styles.kegListItem} onClick={this.handleShowDetails}>
         <div className={styles.kegName}>
           <div className={styles.kegNameAndButton}>
             {this.props.name}
@@ -30,16 +35,15 @@ class KegListItem extends React.Component {
           </div>
           <img src={arrow} />
           <div style={pintRemaining} className={styles.pintsRemaining}>
-            <span>Pints Remaining: {this.state.pints}</span>
           </div>
         </div>
-        <ul>
+        {this.state.showDetails === true ? <ul>
           <li><span>Brewer:</span> {this.props.brewer}</li>
           <li><span>Description:</span> {this.props.description}</li>
           <li><span>ABV:</span> {this.props.abv}</li>
           <li><span>Price:</span> ${this.props.price}</li>
           <li><span>Pints Remaining:</span> {this.state.pints}</li>
-        </ul>
+        </ul> : null}
       </div>
     );
   }

@@ -21,17 +21,6 @@
   transition: background-color .3s ease;
   cursor: pointer;
 }
-.pintsRemaining span {
-  opacity: 0;
-  position: relative;
-  left: 20px;
-  white-space: nowrap;
-  font-size: 80%;
-  color: #000;
-}
-.pintsRemaining:hover span {
-  opacity: .8;
-}
 .pintsRemaining:hover {
   background-color: rgba(234,243,65,.8);
   transition: background-color .3s ease;
@@ -40,6 +29,8 @@
 .kegNameAndButton {
   display: flex;
   align-items: center;
+  width: 350px;
+  justify-content: space-between;
   position: relative;
   z-index: 1;
 }
@@ -53,6 +44,7 @@
 }
 .kegListItem ul li {
   font-weight: 100;
+  margin-bottom: 1.3em;
 }
 .kegListItem ul li span {
   font-weight: 600;
