@@ -26,10 +26,11 @@ class App extends React.Component {
     this.setState({masterKegList: newKegList});
   }
   handleSellingPint() {
-    let newKegList = this.state.masterKegList.slice();
-    newKegList.remaining - 1;
+    let newKegList = Object.assign({}, this.state.masterKegList);
+    Object.keys(newKegList).forEach((ticketId) => {
+      newKegList[ticketId].remaining--;
+    });
     this.setState({masterKegList: newKegList});
-    console.log(this.state.masterKegList)
   }
   render() {
     const appStyles = {
