@@ -13,7 +13,7 @@ function KegListItem(props) {
       <div className={styles.kegName}>
         <div className={styles.kegNameAndButton}>
           {props.name}
-          <span><SellPintButton/></span>
+          <span><SellPintButton onSellingPint={props.onSellingPint}/></span>
         </div>
         <img src={arrow} />
         <div style={pintRemaining} className={styles.pintsRemaining}>
@@ -37,7 +37,8 @@ KegListItem.propTypes = {
   description: PropTypes.string,
   abv: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,
-  remaining: PropTypes.number.isRequired
+  remaining: PropTypes.number.isRequired,
+  onSellingPint: PropTypes.func.isRequired,
 };
 
 export default KegListItem;

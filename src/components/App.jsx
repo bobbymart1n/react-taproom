@@ -1,5 +1,6 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
+import { v4 } from 'uuid';
 
 import Header from './Header/Header';
 import KegList from './KegList/KegList';
@@ -12,14 +13,23 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      masterKegList: []
+      masterKegList: {}
     };
     this.handleAddingNewKeg = this.handleAddingNewKeg.bind(this);
+    this.handleSellingPint = this.handleSellingPint.bind(this);
   }
   handleAddingNewKeg(newKeg) {
-    let newKegList = this.state.masterKegList.slice();
-    newKegList.push(newKeg);
+    let newKegId = v4();
+    let newKegList = Object.assign({}, this.state.masterKegList, {
+      [newKegId]: newKeg
+    });
     this.setState({masterKegList: newKegList});
+  }
+  handleSellingPint() {
+    let newKegList = this.state.masterKegList.slice();
+    newKegList.remaining - 1;
+    this.setState({masterKegList: newKegList});
+    console.log(this.state.masterKegList)
   }
   render() {
     const appStyles = {
@@ -41,7 +51,7 @@ class App extends React.Component {
         <Header />
         <img style={jerryStyles} src={jerry} />
         <Switch>
-          <Route exact path='/' render={()=><KegList kegList={this.state.masterKegList}/>} />
+          <Route exact path='/' render={()=><KegList kegList={this.state.masterKegList} onSellingPint={this.handleSellingPint}/>} />
           <Route path='/newkeg' render={()=><NewKeg onAddingNewKeg={this.handleAddingNewKeg}/>} />
         </Switch>
       </div>

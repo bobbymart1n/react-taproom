@@ -9,22 +9,25 @@ function KegList(props) {
   return (
     <div className={styles.kegList}>
       <AddKegButton />
-      {props.kegList.map((beer, index) =>
-        <KegListItem
+      {Object.keys(props.kegList).map((kegId) => {
+        let beer = props.kegList[kegId];
+        return <KegListItem
           name={beer.name}
           brewer={beer.brewer}
           description={beer.description}
           abv={beer.abv}
           price={beer.price}
           remaining={beer.remaining}
-          key={index}/>
-      )}
+          onSellingPint={props.onSellingPint}
+          key={beer.id}/>;
+      })}
     </div>
   );
 }
 
 KegList.propTypes = {
-  kegList: PropTypes.array
+  kegList: PropTypes.object,
+  onSellingPint: PropTypes.func.isRequired
 };
 
 export default KegList;
