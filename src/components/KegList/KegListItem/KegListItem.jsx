@@ -9,23 +9,23 @@ function KegListItem(props) {
     width: props.remaining + '%',
   };
   return (
-    <div className={styles.kegListItem} onClick={this.handleShowDetails}>
+    <div className={styles.kegListItem}>
       <div className={styles.kegName}>
         <div className={styles.kegNameAndButton}>
           {props.name}
           <span><SellPintButton onSellingPint={props.onSellingPint} kegId={props.kegId}/></span>
         </div>
-        <img src={arrow} />
+        <img src={arrow} onClick={props.onShowDetails} />
         <div style={pintRemaining} className={styles.pintsRemaining}>
         </div>
       </div>
-      <ul>
+      {props.showDetails === true ? <ul>
         <li><span>Brewer:</span> {props.brewer}</li>
         <li><span>Description:</span> {props.description}</li>
         <li><span>ABV:</span> {props.abv}</li>
         <li><span>Price:</span> ${props.price}</li>
         <li><span>Pints Remaining:</span> {props.remaining}</li>
-      </ul>
+      </ul> : null}
     </div>
   );
 }
@@ -38,7 +38,9 @@ KegListItem.propTypes = {
   price: PropTypes.string.isRequired,
   onSellingPint: PropTypes.func.isRequired,
   kegId: PropTypes.string.isRequired,
-  remaining: PropTypes.number.isRequired
+  remaining: PropTypes.number.isRequired,
+  onShowDetails: PropTypes.func.isRequired,
+  showDetails: PropTypes.bool.isRequired
 };
 
 export default KegListItem;

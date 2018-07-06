@@ -38,6 +38,8 @@
   width: 15px;
   position: absolute;
   right: 10px;
+  z-index: 1;
+  cursor: pointer;
 }
 .kegListItem ul {
   list-style: none;
