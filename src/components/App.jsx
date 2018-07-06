@@ -12,8 +12,13 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      
+      masterKegList: []
     };
+  }
+  handleAddingNewKeg(newKeg) {
+    let newKegList = this.state.masterKegList.slice();
+    newKegList.push(newKeg);
+    this.setState({masterKegList: newKegList});
   }
   render() {
     const appStyles = {
@@ -36,7 +41,7 @@ class App extends React.Component {
         <img style={jerryStyles} src={jerry} />
         <Switch>
           <Route exact path='/' component={KegList} />
-          <Route path='/newkeg' component={NewKeg} />
+          <Route path='/newkeg' render={()=><NewKeg onAddingNewKeg={this.handleAddingNewKeg}/>} />
         </Switch>
       </div>
     );

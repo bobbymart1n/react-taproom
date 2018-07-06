@@ -1,9 +1,15 @@
 import React from 'react';
 
-function NewKeg() {
+function NewKeg(props) {
+  const handleNewKegFormSubmission = (e) => e.preventDefault();
   return (
     <div>
-      New Keg Form
+      <input />
+      <input />
+      <input />
+      <input />
+      <input />
+      <button type='submit'>Add Keg</button>
     </div>
   );
 }
