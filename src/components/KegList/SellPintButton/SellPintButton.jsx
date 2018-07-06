@@ -5,12 +5,12 @@ import styles from './SellPintButton.css';
 function SellPintButton(props) {
   return(
     <div>
-      <button className={styles.sellKegButton} onClick={props.onSellingPint()}>Sell Pint</button>
+      <button className={styles.sellKegButton} onClick={props.onSellingPint}>Sell Pint</button>
     </div>
   );
 }
 SellPintButton.propTypes = {
-  onSellingPint: PropTypes.func
+  onSellingPint: PropTypes.func.isRequired
 };
 
 export default SellPintButton;
