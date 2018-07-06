@@ -6,3 +6,7 @@
   background-color: #FAAF19;
   box-shadow: 0 2px 5px rgba(0,0,0,.2);
 }
+.nav h1 {
+  text-decoration: none;
+  color: white;
+}
