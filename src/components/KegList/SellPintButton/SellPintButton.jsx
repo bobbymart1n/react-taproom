@@ -3,9 +3,10 @@ import PropTypes from 'prop-types';
 import styles from './SellPintButton.css';
 
 function SellPintButton(props) {
+  const sellPint = () => props.onSellingPint(props.kegId);
   return(
     <div>
-      <button className={styles.sellKegButton} onClick={props.onSellingPint(props.kegId)}>Sell Pint</button>
+      <button className={styles.sellKegButton} onClick={sellPint}>Sell Pint</button>
     </div>
   );
 }
