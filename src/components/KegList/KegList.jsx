@@ -19,7 +19,8 @@ function KegList(props) {
           price={beer.price}
           remaining={beer.remaining}
           onSellingPint={props.onSellingPint}
-          key={kegId}/>;
+          key={kegId}
+          kegId={kegId}/>;
       })}
     </div>
   );

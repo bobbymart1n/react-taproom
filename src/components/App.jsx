@@ -27,8 +27,9 @@ class App extends React.Component {
   }
   handleSellingPint() {
     let newKegList = Object.assign({}, this.state.masterKegList);
-    Object.keys(newKegList).forEach((ticketId) => {
-      newKegList[ticketId].remaining--;
+    Object.keys(newKegList).forEach((kegId) => {
+      console.log(kegId)
+      // newKegList[kegId].remaining--;
     });
     this.setState({masterKegList: newKegList});
   }
