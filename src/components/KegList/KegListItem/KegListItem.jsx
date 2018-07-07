@@ -15,17 +15,17 @@ function KegListItem(props) {
           {props.name}
           <span><SellPintButton onSellingPint={props.onSellingPint} kegId={props.kegId}/></span>
         </div>
-        <img src={arrow} onClick={props.onShowDetails} />
+        <img src={arrow} />
         <div style={pintRemaining} className={styles.pintsRemaining}>
         </div>
       </div>
-      {props.showDetails === true ? <ul>
+      <ul>
         <li><span>Brewer:</span> {props.brewer}</li>
         <li><span>Description:</span> {props.description}</li>
         <li><span>ABV:</span> {props.abv}</li>
         <li><span>Price:</span> ${props.price}</li>
         <li><span>Pints Remaining:</span> {props.remaining}</li>
-      </ul> : null}
+      </ul>
     </div>
   );
 }
@@ -39,8 +39,6 @@ KegListItem.propTypes = {
   onSellingPint: PropTypes.func.isRequired,
   kegId: PropTypes.string.isRequired,
   remaining: PropTypes.number.isRequired,
-  onShowDetails: PropTypes.func.isRequired,
-  showDetails: PropTypes.bool.isRequired
 };
 
 export default KegListItem;
