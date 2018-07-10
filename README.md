@@ -1,5 +1,5 @@
 # React Angular Project Clone
-**A React project for Epicodus 06.29.18**
+**A React project for Epicodus 07.05.18**
 
 ## By Bobby Martin
 
